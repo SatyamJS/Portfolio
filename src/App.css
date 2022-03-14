@@ -1,0 +1,682 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Roboto:wght@300&display=swap');
+*{
+  --primary-dark:#0a0613;
+  --secondary-dark:#130c25;
+  --tri-dark:#1d1238;
+  --quad-dark:#5636a7;
+  box-sizing:border-box;
+  margin:0px;
+  max-width:100%;
+  height:auto;
+  scroll-behavior: smooth;
+
+}
+
+body{
+  margin:0px;
+  width:100vw;
+  font-family: 'Roboto', sans-serif;
+  background-color:var(--primary-dark);
+  position:relative;
+  left:0px;
+  color:#5636a7;
+  overflow-x:hidden;
+}
+h3{
+  text-align: center;
+  margin:20px auto;
+  margin-top:60px;
+
+}
+/* loading animation-------------------> */
+.loadingDiv{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  min-height:100vh;
+  background-color: var(--primary-dark);
+}
+.loading{
+  position:relative;
+  width:100vw;
+  height:100vh;
+  display:flex;
+  color:var(--quad-dark);
+  justify-content: center;
+  align-items:center;
+
+
+}
+.loading h1{
+  font-family:"Poppins" , sans-serif;
+  position:absolute;
+  /* color:#fff; */
+  /* transform:translate(-50%,-50%); */
+  font-size:5.7em;
+}
+.loadingh1 {
+  color:transparent;
+  -webkit-text-stroke:2px var(--quad-dark);
+}
+.loadingh2 {
+  color:var(--quad-dark);
+  animation:water 3s ease-in-out infinite;
+}
+
+@keyframes water {
+  0%,100%{
+    clip-path: polygon(0 44%, 19% 47%, 36% 57%, 51% 69%, 68% 69%, 80% 63%, 93% 51%, 100% 43%, 99% 100%, 0% 100%);
+  }
+  50%{
+    clip-path: polygon(0 73%, 18% 73%, 31% 76%, 50% 72%, 63% 62%, 73% 54%, 84% 45%, 100% 43%, 99% 100%, 0% 100%);
+  }
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* loading animation-------------------> */
+
+/* logo css--------------------------------------------------> */
+.logo{
+  font-family: 'Dancing Script', cursive;
+  font-size: 3em;
+  background-image: linear-gradient(45deg, red,purple);
+  background-size: 40% 100%;
+  margin:0rem 0rem;
+  padding:1rem 1rem;
+  background-clip: text;
+  -webkit-text-fill-color:transparent;
+  animation: colorChanger 6s linear infinite;
+  transition:all ;
+} /* logo css--------------------------------------------------> */
+
+
+
+
+
+
+
+
+
+/* Navbar CSS-----------------------------------------------------> */
+  .container{
+  margin:10px 10px;
+  height:120px;
+  background-color: var(--secondary-dark);
+  display: flex;
+  align-items:center;
+  justify-content: space-between;
+  border-radius:50px;
+  box-shadow:2px 2px 10px rgba(0,0,0,0.5),-5px -5px 15px rgba(0,0,0,0.5);
+}
+.menu{
+  background-color: var(--secondary-dark);
+  display:none;
+  margin:10px 10px;
+}
+.menu a{
+  color:var(--quad-dark);
+  background-color: var(--tri-dark);
+  margin:30px;
+  padding:12px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size:15px;
+  border:1px solid transparent;
+  box-shadow: 1px 1px 3px black, -1px -1px 3px black;
+  transition: all 0.5s;
+}
+.menu a:hover{
+  animation:gradient 2s  linear infinite;
+  color:bisque;
+  border-color:white;
+}
+
+.hamburger{
+  cursor:pointer;
+  display: flex;
+  position:relative;
+  top:5px;
+  flex-direction: column;
+  margin:8vh 5vw;
+  padding:1px;
+  background-color: var(--secondary-dark);
+}
+.hamburger span{
+  background-color:white;
+  margin:2px;
+  width:32px;
+  height:4px;
+}
+
+.hamburger:hover span:nth-child(2){
+  transform:translateX(15px);
+  background-image: linear-gradient(to right,red ,purple);
+  transition:all 0.4s;
+}
+.hamburger.is-active span:nth-child(1){
+  position:relative;
+  transform:rotate(45deg);
+  transform-origin: 7px 5px;
+  background-image: linear-gradient(to right,red ,purple);
+}
+.hamburger.is-active span:nth-child(2){
+  display:none;
+}
+.hamburger.is-active span:nth-child(3){
+  transform:rotate(-45deg);
+  background-image: linear-gradient(to right,red ,purple);
+}
+.hamburgerLinks{
+  display:flex;
+  flex-direction: column;
+  align-items:center;
+
+  background-color: var(--secondary-dark);
+}
+.hiddenNav{
+  display:hidden;
+  font-size: 0px;
+  
+}
+.hamburgerLinks a{
+  color:var(--quad-dark);
+  text-decoration:none;
+  width:100vw;
+  height:10vh;
+  text-align:center;
+  padding: 20px;
+  font-size: 25px;
+
+}
+
+.hamburgerLinks a:hover{
+  position:relative;
+  background-image: linear-gradient(to right,red,purple);
+  color:bisque;
+  animation:effect 0.4s linear forwards;
+  transition: all 0.5s;
+}
+@keyframes effect{
+  0%{
+    width:100%;
+  }
+  100%{
+    width:50%;
+  }
+}
+
+/* Navbar CSS-----------------------------------------------------> */
+
+
+
+
+
+
+
+
+/* main component CSS-----------------------------------------> */
+
+
+.main{
+  display: flex;
+  flex-direction: row;
+  flex-wrap:wrap;
+  justify-content: center;
+}
+.mainImage{
+  text-align:center;
+  width:230px;
+  height:400px;
+  margin:10px;
+  border-radius:15px;
+  transition:all 1s;
+}
+.mainImage:hover{
+  border-radius:50%;
+  opacity:0.4;
+}
+.mainImgDiv{
+  border-radius: 15px;
+}
+.mainCard{
+  width:500px;
+  height:400px;
+  margin:10px;
+  /* padding:10px 10px; */
+  display:flex;
+  justify-items:center;
+}
+
+.mainCardOuter{
+  margin:10px auto;
+  border-radius: 15px;
+  display:flex;
+  width:400px;
+  height:350px;
+  justify-content: center;
+  box-shadow: inset 2px 2px 10px rgba(0,0,0,0.5),
+  inset -2px -2px 10px rgba(255,255,255,0.05),
+  2px 2px 10px black , -2px -2px 10px rgba(255,255,255,0.05);
+}
+.mainCardInner{
+  margin:auto 1px;
+  height:90%;
+  width: 90%;
+  padding:10px;
+  border-radius: 15px;
+  transition: all 0.5s;
+
+}
+.mainCardInner a{
+  text-decoration:none;
+}
+.mainCardInner:hover{
+  color:bisque;
+  background-image:linear-gradient(45deg,red 10%,purple);
+  transform:translateY(-40px);
+}
+.btn{
+  cursor:pointer;
+  outline:none;
+  display: block;
+  margin:20px auto;
+  padding:10px;
+  border-radius: 6px;
+  background-image:linear-gradient(45deg,purple 20%,red);
+  color:white;
+  border:0;
+ font-size:20px; 
+ background-size:400% 400%;
+ animation:gradient 2s  linear infinite;
+ transition: all 0.5s;
+}
+.btn:hover{
+  border:1px solid white;
+}
+
+.skillsDiv{
+  /* border:1px solid white; */
+  display:flex;
+  flex-wrap: wrap;
+  width:90vw;
+  height:200px;
+  margin:10px auto;
+  border-radius: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+.skill{
+  width:100px;
+  height:100px;
+  padding:20px;
+  background-color: var(--secondary-dark);
+  margin:10px;
+  border-radius:10px;
+  box-shadow:1px 1px 3px black,-1px -1px 3px black;
+}
+.skill:hover{
+  animation:shake 0.5s linear infinite;
+  background-image: linear-gradient(45deg,red 10%,purple);
+}
+
+.skill img{
+  width:100%;
+  height:100%;
+  object-fit: contain;
+}
+.animationBackground{
+  display: none;
+}
+
+
+.animateBg1{
+  width: 10px;
+  height:10px;
+  border:1px solid black;
+  background-color:var(--primary-dark);
+  position:absolute;
+  bottom:40vh;
+  right:15vw;
+  animation:cube 6s forwards infinite;
+  z-index:-1;
+}
+
+.animateBg2{
+  width: 10px;
+  height:10px;
+  border:1px solid black;
+  background-color:var(--primary-dark);
+  position:absolute;
+  bottom:30vh;
+  left:25vw;
+  animation:cube 6s forwards infinite;
+  animation-delay: 2s;
+  z-index:-1;
+}
+
+.animateBg3{
+  width: 10px;
+  height:10px;
+  border:1px solid black;
+  background-color:var(--primary-dark);
+  position:absolute;
+  top:90vh;
+  right:15vw;
+  animation:cube 6s forwards infinite;
+  animation-delay: 1s;
+  z-index:-1;
+}
+
+.animateBg4{
+  width: 10px;
+  height:10px;
+  border:1px solid black;
+  background-color:var(--primary-dark);
+  position:absolute;
+  top:40vh;
+  right:15vw;
+  animation:cube 6s forwards infinite;
+  animation-delay: 4s;
+  z-index:-1;
+}
+
+.animateBg5{
+  width: 10px;
+  height:10px;
+  border:1px solid black;
+  background-color:var(--primary-dark);
+  position:absolute;
+  top:35vh;
+  left:5vw;
+  animation:cube 6s forwards infinite;
+  animation-delay: 1s;
+  z-index:-1;
+}
+
+.animateBg6{
+  width: 10px;
+  height:10px;
+  border:1px solid black;
+  background-color:var(--primary-dark);
+  position:absolute;
+  top:70vh;
+  left:10vw;
+  animation:cube 6s forwards infinite;
+  animation-delay: 4s;
+  z-index:-1;
+}
+
+
+
+/* main component CSS-----------------------------------------> */
+
+
+/* footer component css---------------------------------------> */
+.footerDiv{
+  display:flex;
+  position:relative;
+  bottom:-255px;
+  left:0px;
+  width:100vw;
+  height:200px;
+  margin-top:20px;
+  align-items: center;
+  justify-content: center;
+  background-color:var(--secondary-dark);
+}
+.footerDiv p{
+  position:absolute;
+  bottom:5px;
+}
+.fa-brands{
+  -webkit-text-fill-color: transparent;
+  padding:15px;
+  margin-top:35px;
+  font-size:25px;
+  background-clip:text;
+  background-image: linear-gradient(45deg,red 10%,purple);
+  transition:all 1s;
+}
+.fa-brands:hover{
+  transform: translateY(-20px);
+}
+/* footer component css---------------------------------------> */
+
+
+
+
+
+/* about div--------------------------> */
+
+.aboutDiv{
+  display:flex;
+  flex-wrap:wrap;
+  align-items: center;
+  justify-content:center;
+  position:relative;
+  top: 280px;
+  background-color: var(--secondary-dark);
+  width:90vw;
+  margin:10px auto;
+  padding:5px;
+  border-radius:50px;
+  box-shadow:5px 5px 15px rgba(0,0,0,0.5), -5px -5px 15px rgba(0,0,0,0.5);
+}
+.aboutContent{
+  width:600px;
+  height:80vh;
+  padding:50px 0px;
+  border-radius:15px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  background-clip: text;
+  background-image:linear-gradient(45deg, red 10%,purple);
+  -webkit-text-fill-color: transparent;
+}
+.aboutContent p{
+  line-height: 25px;
+}
+.aboutImage{
+  width:600px;
+  height:400px;
+  filter:brightness(105%);
+  box-shadow:2px 2px 10px rgba(0,0,0,0.5),-5px -5px 15px rgba(0,0,0,0.5);
+  border-radius:50px;
+  
+}
+/* about div--------------------------> */
+
+/* work component-----------------------------------> */
+
+.workDiv{
+  display:flex;
+  flex-wrap:wrap;
+  width:95vw;
+  margin: 50px auto;
+  padding:20px 5px;
+  justify-content: center;
+  align-items: center;
+  background-color:var(--secondary-dark);
+  border-radius:50px;
+  box-shadow:2px 2px 10px rgba(0,0,0,0.5),-5px -5px 15px rgba(0,0,0,0.5); 
+  position:relative;
+  top:250px;
+}
+.websiteFrame{
+  margin:20px auto;
+  width:260px;
+  height:450px;
+  border:none;
+  border-radius:30px;
+  transition: all 1s;
+
+}
+.websiteFrame:hover{
+  opacity:0.3;
+}
+.workDiv p{
+  display:flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  padding:20px;
+}
+.workDiv p a{
+  text-decoration: none;
+  color:beige;
+  position:relative;
+  font-weight: bolder;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* work component-----------------------------------> */
+
+@media (min-width:768px){
+  .loading h1{
+    font-size: 8em;
+  }
+  .menu{
+    display:block;
+  }
+  .hamburger{
+    display:none;
+  }
+  .hamburgerLinks{
+    display:none;
+  }
+  .animationBackground{
+    display:inline-block;
+    width:0px;
+  }
+  .footerDiv{
+    bottom:0px;
+  }
+  .aboutImage{
+    width:600px;
+    height:700px;
+    position:relative;
+    top:0px;
+    right:-10px;
+  }
+  .aboutDiv{
+    display:flex;
+    flex-wrap:wrap;
+    align-items: center;
+    justify-content:center;
+    position:relative;
+    top:0px;
+    background-color: var(--secondary-dark);
+    width:90vw;
+    margin:100px auto;
+    padding:5px;
+    border-radius:50px;
+    box-shadow:5px 5px 15px rgba(0,0,0,0.5), -5px -5px 15px rgba(0,0,0,0.5);
+}
+.workDiv{
+  top:0px;
+}
+.workDiv p a{
+  left:2px;
+}
+}
+@keyframes colorChanger{
+  0%{
+    background-position: 0%;
+  }
+  100%{
+    background-position: 100%;
+    
+  }
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+@keyframes  cube {
+  from{
+ transform:scale(0) rotate(0deg);
+ opacity:1;
+}
+to {
+    transform:scale(15) rotate(720deg);
+    opacity:0;
+  }
+}
