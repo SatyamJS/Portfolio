@@ -26,7 +26,7 @@ class Footer extends Component {
                     <a href="https://www.facebook.com/sat.gu.9" target="_blank"><i class="fa-brands fa-facebook-f"></i>
                     </a>
 
-                    <p> &copy; 2021-2022 <strong>Satyam Gupta</strong></p>
+                    <p> &copy; 2022 <strong>Satyam Gupta</strong></p>
                 </div>
             </>
         )
