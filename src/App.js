@@ -19,7 +19,7 @@ class App extends Component {
     setTimeout((e)=>{
       this.setState({isLoading:false})
 
-    },5000)
+    },3000)
   }
   render(){
     
